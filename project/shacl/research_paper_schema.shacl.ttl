@@ -1,0 +1,90 @@
+@prefix PATO: <http://purl.obolibrary.org/obo/PATO_> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix research_paper_schema: <https://w3id.org/axle_informatics/research-paper-schema/> .
+@prefix schema1: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schema1:Thing a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A generic grouping for any identifiable entity" ;
+    sh:ignoredProperties ( schema1:email research_paper_schema:vital_status rdf:type research_paper_schema:age_in_years schema1:birthDate ) ;
+    sh:property [ sh:datatype xsd:anyURI ;
+            sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path schema1:identifier ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path schema1:description ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path schema1:name ] ;
+    sh:targetClass schema1:Thing .
+
+research_paper_schema:ResearchPaperCollection a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A holder for ResearchPaper objects" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class research_paper_schema:ResearchPaper ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path research_paper_schema:entries ] ;
+    sh:targetClass research_paper_schema:ResearchPaperCollection .
+
+research_paper_schema:ResearchPaper a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Represents a ResearchPaper" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "The main email address of a person" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path schema1:email ;
+            sh:pattern "^\\S+@[\\S+\\.]+\\S+" ],
+        [ sh:datatype xsd:anyURI ;
+            sh:description "A unique identifier for a thing" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path schema1:identifier ],
+        [ sh:description "living or dead status" ;
+            sh:in ( PATO:0001421 PATO:0001422 "UNKNOWN" ) ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:path research_paper_schema:vital_status ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable description for a thing" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path schema1:description ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable name for a thing" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path schema1:name ],
+        [ sh:datatype xsd:date ;
+            sh:description "Date on which a person is born" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path schema1:birthDate ],
+        [ sh:datatype xsd:integer ;
+            sh:description "Number of years since birth" ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path research_paper_schema:age_in_years ] ;
+    sh:targetClass research_paper_schema:ResearchPaper .
+

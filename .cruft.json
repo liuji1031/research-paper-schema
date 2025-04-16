@@ -1,0 +1,33 @@
+{
+  "template": "https://github.com/linkml/linkml-project-cookiecutter",
+  "commit": "494e28e5496acc76558c07c95dea62d2db05081c",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "research-paper-schema",
+      "__project_slug": "research_paper_schema",
+      "github_org": "axle_informatics",
+      "__source_path": "src/research_paper_schema/schema/research_paper_schema.yaml",
+      "project_description": "LinkML schema for research paper",
+      "full_name": "Ji Liu",
+      "email": "ji.liu@axleinfo.com",
+      "__author": "Ji Liu <ji.liu@axleinfo.com>",
+      "license": "Apache Software License 2.0",
+      "main_schema_class": "ResearchPaper",
+      "create_python_classes": "No",
+      "use_schemasheets": "No",
+      "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
+      "google_sheet_tabs": "personinfo enums",
+      "__google_sheet_module": "personinfo_enums",
+      "github_token_for_pypi_deployment": "PYPI_PASSWORD",
+      "_copy_without_render": [
+        "justfile",
+        "src/docs/js/*",
+        "src/docs/javascript/*"
+      ],
+      "_template": "https://github.com/linkml/linkml-project-cookiecutter",
+      "_commit": "494e28e5496acc76558c07c95dea62d2db05081c"
+    }
+  },
+  "directory": null
+}
