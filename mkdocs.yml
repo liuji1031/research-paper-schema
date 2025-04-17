@@ -15,9 +15,9 @@ plugins:
   - mermaid2:
       version: 10.9.0
   - awesome-nav
-nav:
-  - Index: index.md
-  - About: about.md
+# nav:
+#   - Index: index.md
+#   - About: about.md
 site_url: https://liuji1031.github.io/research-paper-schema
 repo_url: https://github.com/liuji1031/research-paper-schema
 markdown_extensions:
