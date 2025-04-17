@@ -4,7 +4,7 @@ LinkML schema for research paper
 
 ## Website
 
-[https://liuji1031.github.io/research-paper-schema](https://liuji1031.github.io/research-paper-schema)
+[https://liuji1031.github.io/research-paper-schema/ResearchPaper](https://liuji1031.github.io/research-paper-schema/ResearchPaper/)
 
 ## Repository Structure
 
