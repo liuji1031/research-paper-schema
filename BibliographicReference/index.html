@@ -1,0 +1,1344 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://liuji1031.github.io/research-paper-schema/BibliographicReference/" rel="canonical"/>
+<link href="../authors/" rel="prev"/>
+<link href="../BibliographicReferenceList/" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.11" name="generator"/>
+<title>Class: bibliographic reference (BibliographicReference) - research-paper-schema</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../css/ansi-colours.css" rel="stylesheet"/>
+<link href="../css/jupyter-cells.css" rel="stylesheet"/>
+<link href="../css/pandas-dataframe.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#class-bibliographic-reference-bibliographicreference">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="research-paper-schema" class="md-header__button md-logo" data-md-component="logo" href=".." title="research-paper-schema">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            research-paper-schema
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Class: bibliographic reference (BibliographicReference)
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/liuji1031/research-paper-schema" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="research-paper-schema" class="md-nav__button md-logo" data-md-component="logo" href=".." title="research-paper-schema">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    research-paper-schema
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/liuji1031/research-paper-schema" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<span class="md-ellipsis">
+    research-paper-schema
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Abstract/">
+<span class="md-ellipsis">
+    Class: abstract (Abstract)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Acknowledgements/">
+<span class="md-ellipsis">
+    Class: acknowledgements (Acknowledgements)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Any/">
+<span class="md-ellipsis">
+    Class: Any
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../AuthorContribution/">
+<span class="md-ellipsis">
+    Class: author contribution (AuthorContribution)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../AuthorList/">
+<span class="md-ellipsis">
+    Slot: AuthorList
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../about/">
+<span class="md-ellipsis">
+    research-paper-schema
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../abstract/">
+<span class="md-ellipsis">
+    Slot: abstract
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../acknowledgements/">
+<span class="md-ellipsis">
+    Slot: acknowledgements
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../additional_name/">
+<span class="md-ellipsis">
+    Slot: additionalName (additional_name)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../author_contributions/">
+<span class="md-ellipsis">
+    Slot: author_contributions
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../authors/">
+<span class="md-ellipsis">
+    Slot: authors
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Class: bibliographic reference (BibliographicReference)
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Class: bibliographic reference (BibliographicReference)
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#slots">
+<span class="md-ellipsis">
+      Slots
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usages">
+<span class="md-ellipsis">
+      Usages
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifier-and-mapping-information">
+<span class="md-ellipsis">
+      Identifier and Mapping Information
+    </span>
+</a>
+<nav aria-label="Identifier and Mapping Information" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schema-source">
+<span class="md-ellipsis">
+      Schema Source
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mappings">
+<span class="md-ellipsis">
+      Mappings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linkml-source">
+<span class="md-ellipsis">
+      LinkML Source
+    </span>
+</a>
+<nav aria-label="LinkML Source" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direct">
+<span class="md-ellipsis">
+      Direct
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#induced">
+<span class="md-ellipsis">
+      Induced
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../BibliographicReferenceList/">
+<span class="md-ellipsis">
+    Class: bibliographic reference list (BibliographicReferenceList)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Book/">
+<span class="md-ellipsis">
+    Class: book (Book)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Boolean/">
+<span class="md-ellipsis">
+    Type: Boolean
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Conclusion/">
+<span class="md-ellipsis">
+    Class: conclusion (Conclusion)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ConflictOfInterests/">
+<span class="md-ellipsis">
+    Class: conflict of interest section (ConflictOfInterests)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Curie/">
+<span class="md-ellipsis">
+    Type: Curie
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../conclusion/">
+<span class="md-ellipsis">
+    Slot: conclusion
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../conflict_of_interests/">
+<span class="md-ellipsis">
+    Slot: conflict_of_interests
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Date/">
+<span class="md-ellipsis">
+    Type: Date
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../DateOrDatetime/">
+<span class="md-ellipsis">
+    Type: DateOrDatetime
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Datetime/">
+<span class="md-ellipsis">
+    Type: Datetime
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Decimal/">
+<span class="md-ellipsis">
+    Type: Decimal
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Discussion/">
+<span class="md-ellipsis">
+    Class: discussion (Discussion)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Double/">
+<span class="md-ellipsis">
+    Type: Double
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../dcterms_has_part/">
+<span class="md-ellipsis">
+    Slot: dcterms_has_part
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../discussion/">
+<span class="md-ellipsis">
+    Slot: discussion
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../doi/">
+<span class="md-ellipsis">
+    Slot: has DOI (doi)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../edition/">
+<span class="md-ellipsis">
+    Slot: has edition (edition)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../eissn/">
+<span class="md-ellipsis">
+    Slot: has eISSN (eissn)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ending_page/">
+<span class="md-ellipsis">
+    Slot: has ending page (ending_page)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Figure/">
+<span class="md-ellipsis">
+    Class: figure (Figure)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Float/">
+<span class="md-ellipsis">
+    Type: Float
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../figure_caption/">
+<span class="md-ellipsis">
+    Slot: caption (figure_caption)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../figures/">
+<span class="md-ellipsis">
+    Slot: figures
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../first_name/">
+<span class="md-ellipsis">
+    Slot: firstName (first_name)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../has_place_of_publication/">
+<span class="md-ellipsis">
+    Slot: has place of publication (has_place_of_publication)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../has_publication_year/">
+<span class="md-ellipsis">
+    Slot: has publication year (has_publication_year)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Integer/">
+<span class="md-ellipsis">
+    Type: Integer
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Introduction/">
+<span class="md-ellipsis">
+    Class: introduction (Introduction)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../image/">
+<span class="md-ellipsis">
+    Slot: image
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction/">
+<span class="md-ellipsis">
+    Slot: introduction
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../isbn/">
+<span class="md-ellipsis">
+    Slot: has ISBN (isbn)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../issn/">
+<span class="md-ellipsis">
+    Slot: has ISSN (issn)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../issue/">
+<span class="md-ellipsis">
+    Slot: has issue identifier (issue)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Journal/">
+<span class="md-ellipsis">
+    Class: journal (Journal)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Jsonpath/">
+<span class="md-ellipsis">
+    Type: Jsonpath
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Jsonpointer/">
+<span class="md-ellipsis">
+    Type: Jsonpointer
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ListOfAuthors/">
+<span class="md-ellipsis">
+    Class: list of authors (ListOfAuthors)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../last_name/">
+<span class="md-ellipsis">
+    Slot: lastName (last_name)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Materials/">
+<span class="md-ellipsis">
+    Class: materials (Materials)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Methods/">
+<span class="md-ellipsis">
+    Class: methods (Methods)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../methods_materials/">
+<span class="md-ellipsis">
+    Slot: methods_materials
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Ncname/">
+<span class="md-ellipsis">
+    Type: Ncname
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Nodeidentifier/">
+<span class="md-ellipsis">
+    Type: Nodeidentifier
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Objectidentifier/">
+<span class="md-ellipsis">
+    Type: Objectidentifier
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Paragraph/">
+<span class="md-ellipsis">
+    Class: paragraph (Paragraph)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Person/">
+<span class="md-ellipsis">
+    Class: Person (Person)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../part_of/">
+<span class="md-ellipsis">
+    Slot: is part of (part_of)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../pattern_contains/">
+<span class="md-ellipsis">
+    Slot: pattern_contains
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../publication_date/">
+<span class="md-ellipsis">
+    Slot: has publication date (publication_date)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../publisher/">
+<span class="md-ellipsis">
+    Slot: Publisher (publisher)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ResearchPaper/">
+<span class="md-ellipsis">
+    Class: research paper (ResearchPaper)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Results/">
+<span class="md-ellipsis">
+    Class: results (Results)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../references/">
+<span class="md-ellipsis">
+    Slot: references
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../research-paper-schema/">
+<span class="md-ellipsis">
+    research-paper-schema
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../results/">
+<span class="md-ellipsis">
+    Slot: results
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Section/">
+<span class="md-ellipsis">
+    Class: section (Section)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SectionTitle/">
+<span class="md-ellipsis">
+    Class: section title (SectionTitle)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Sparqlpath/">
+<span class="md-ellipsis">
+    Type: Sparqlpath
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../String/">
+<span class="md-ellipsis">
+    Type: String
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SupplementaryInformationDescription/">
+<span class="md-ellipsis">
+    Class: supplementary information description (SupplementaryInformationDescription)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../section_title/">
+<span class="md-ellipsis">
+    Slot: section_title
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../starting_page/">
+<span class="md-ellipsis">
+    Slot: has starting page (starting_page)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../supplementary_information/">
+<span class="md-ellipsis">
+    Slot: supplementary_information
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Table/">
+<span class="md-ellipsis">
+    Class: table (Table)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Time/">
+<span class="md-ellipsis">
+    Type: Time
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../table_caption/">
+<span class="md-ellipsis">
+    Slot: table_caption
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../table_data/">
+<span class="md-ellipsis">
+    Slot: table_data
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tables/">
+<span class="md-ellipsis">
+    Slot: tables
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../textual_content/">
+<span class="md-ellipsis">
+    Slot: textual_content
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../title/">
+<span class="md-ellipsis">
+    Slot: has title (title)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Uri/">
+<span class="md-ellipsis">
+    Type: Uri
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Uriorcurie/">
+<span class="md-ellipsis">
+    Type: Uriorcurie
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../volume/">
+<span class="md-ellipsis">
+    Slot: has volume identifier (volume)
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Year/">
+<span class="md-ellipsis">
+    Type: Year
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../YearMonth/">
+<span class="md-ellipsis">
+    Type: YearMonth
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#slots">
+<span class="md-ellipsis">
+      Slots
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usages">
+<span class="md-ellipsis">
+      Usages
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifier-and-mapping-information">
+<span class="md-ellipsis">
+      Identifier and Mapping Information
+    </span>
+</a>
+<nav aria-label="Identifier and Mapping Information" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schema-source">
+<span class="md-ellipsis">
+      Schema Source
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mappings">
+<span class="md-ellipsis">
+      Mappings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linkml-source">
+<span class="md-ellipsis">
+      LinkML Source
+    </span>
+</a>
+<nav aria-label="LinkML Source" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direct">
+<span class="md-ellipsis">
+      Direct
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#induced">
+<span class="md-ellipsis">
+      Induced
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="class-bibliographic-reference-bibliographicreference">Class: bibliographic reference (BibliographicReference)</h1>
+<p><em>A reference, usually contained in a footnote or a bibliographic reference list, that refer to another publication, such as a journal article, a book, a book chapter or a Web site. The inclusion of the bibliographic reference in a publication constitutes the performative act of bibliographic citation.</em></p>
+<p>URI: <a href="http://purl.org/spar/deo/BibliographicReference">deo:BibliographicReference</a></p>
+<div class="mermaid"> classDiagram
+    class BibliographicReference
+    click BibliographicReference href "../BibliographicReference"
+      BibliographicReference : AuthorList
+
+
+
+
+    BibliographicReference --&gt; "0..1" ListOfAuthors : AuthorList
+    click ListOfAuthors href "../ListOfAuthors"
+
+
+      BibliographicReference : doi
+
+      BibliographicReference : ending_page
+
+      BibliographicReference : has_publication_year
+
+      BibliographicReference : part_of
+
+
+
+
+    BibliographicReference --&gt; "1" Any : part_of
+    click Any href "../Any"
+
+
+      BibliographicReference : starting_page
+
+      BibliographicReference : title
+
+
+</div>
+<!-- no inheritance hierarchy -->
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+<th>Inheritance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../title/">title</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>A name given to a resource</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../has_publication_year/">has_publication_year</a></td>
+<td>0..1 <br/> <a href="../Year/">Year</a></td>
+<td>The year in which a resource is published</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../doi/">doi</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A Digital Object Identifier for a serial publication item, a dataset or some ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../part_of/">part_of</a></td>
+<td>1 <br/> <a href="../Any/">Any</a> or <br/><a href="../String/">String</a> or <br/><a href="../Journal/">Journal</a> or <br/><a href="../Book/">Book</a></td>
+<td>Meaning = is part of</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../starting_page/">starting_page</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>Identifies the first page of an entity such as a journal article</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../ending_page/">ending_page</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>Identifies the last page of an entity such as a journal article</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../AuthorList/">AuthorList</a></td>
+<td>0..1 <br/> <a href="../ListOfAuthors/">ListOfAuthors</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usages">Usages</h2>
+<table>
+<thead>
+<tr>
+<th>used by</th>
+<th>used in</th>
+<th>type</th>
+<th>used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../BibliographicReferenceList/">BibliographicReferenceList</a></td>
+<td><a href="../pattern_contains/">pattern_contains</a></td>
+<td>range</td>
+<td><a href="./">BibliographicReference</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: https://w3id.org/axle_informatics/research-paper-schema</li>
+</ul>
+<h2 id="mappings">Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>deo:BibliographicReference</td>
+</tr>
+<tr>
+<td>native</td>
+<td>research_paper_schema:BibliographicReference</td>
+</tr>
+</tbody>
+</table>
+<h2 id="linkml-source">LinkML Source</h2>
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+<h3 id="direct">Direct</h3>
+<details>
+<pre><code class="language-yaml">name: BibliographicReference
+description: A reference, usually contained in a footnote or a bibliographic reference
+  list, that refer to another publication, such as a journal article, a book, a book
+  chapter or a Web site. The inclusion of the bibliographic reference in a publication
+  constitutes the performative act of bibliographic citation.
+title: bibliographic reference
+from_schema: https://w3id.org/axle_informatics/research-paper-schema
+slots:
+- title
+- has_publication_year
+- doi
+- part_of
+- starting_page
+- ending_page
+slot_usage:
+  title:
+    name: title
+    required: true
+    multivalued: false
+  part_of:
+    name: part_of
+    range: Any
+    required: true
+    multivalued: false
+    any_of:
+    - range: string
+    - range: Journal
+    - range: Book
+attributes:
+  AuthorList:
+    name: AuthorList
+    from_schema: http://example.org/reference.yaml
+    rank: 1000
+    domain_of:
+    - BibliographicReference
+    range: ListOfAuthors
+    required: false
+    multivalued: false
+class_uri: deo:BibliographicReference
+
+</code></pre>
+</details>
+<h3 id="induced">Induced</h3>
+<details>
+<pre><code class="language-yaml">name: BibliographicReference
+description: A reference, usually contained in a footnote or a bibliographic reference
+  list, that refer to another publication, such as a journal article, a book, a book
+  chapter or a Web site. The inclusion of the bibliographic reference in a publication
+  constitutes the performative act of bibliographic citation.
+title: bibliographic reference
+from_schema: https://w3id.org/axle_informatics/research-paper-schema
+slot_usage:
+  title:
+    name: title
+    required: true
+    multivalued: false
+  part_of:
+    name: part_of
+    range: Any
+    required: true
+    multivalued: false
+    any_of:
+    - range: string
+    - range: Journal
+    - range: Book
+attributes:
+  AuthorList:
+    name: AuthorList
+    from_schema: http://example.org/reference.yaml
+    rank: 1000
+    alias: AuthorList
+    owner: BibliographicReference
+    domain_of:
+    - BibliographicReference
+    range: ListOfAuthors
+    required: false
+    multivalued: false
+  title:
+    name: title
+    description: A name given to a resource.  Typically, the title will be the name
+      by which the resource is formally known.
+    title: has title
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    slot_uri: dcterms:title
+    alias: title
+    owner: BibliographicReference
+    domain_of:
+    - Journal
+    - BibliographicReference
+    - Book
+    range: string
+    required: true
+    multivalued: false
+  has_publication_year:
+    name: has_publication_year
+    description: The year in which a resource is published.
+    title: has publication year
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    slot_uri: fabio:hasPublicationYear
+    alias: has_publication_year
+    owner: BibliographicReference
+    domain_of:
+    - BibliographicReference
+    range: year
+  doi:
+    name: doi
+    description: A Digital Object Identifier for a serial publication item, a dataset
+      or some other entity.
+    title: has DOI
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    slot_uri: prism:doi
+    alias: doi
+    owner: BibliographicReference
+    domain_of:
+    - BibliographicReference
+    range: string
+    pattern: ^10.\d{4,9}/[-._;()/:A-Z0-9]+$
+  part_of:
+    name: part_of
+    description: Meaning = is part of.  As defined by FRBR (http://www.ifla.org/VII/s13/frbr/frbr1.htm;
+      http://purl.org/vocab/frbr/core#partOf), a property indicating that one entity
+      is a part of another entity. In the case of a bibliographic reference, the reference
+      is part of a larger work, such as a journal article, a book, a book chapter
+      or a Web site.
+    title: is part of
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    slot_uri: frbr:partOf
+    alias: part_of
+    owner: BibliographicReference
+    domain_of:
+    - BibliographicReference
+    range: Any
+    required: true
+    multivalued: false
+    any_of:
+    - range: string
+    - range: Journal
+    - range: Book
+  starting_page:
+    name: starting_page
+    description: Identifies the first page of an entity such as a journal article.
+    title: has starting page
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    slot_uri: prism:startingPage
+    alias: starting_page
+    owner: BibliographicReference
+    domain_of:
+    - BibliographicReference
+    range: integer
+    minimum_value: 1
+  ending_page:
+    name: ending_page
+    description: Identifies the last page of an entity such as a journal article.
+    title: has ending page
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    slot_uri: prism:endingPage
+    alias: ending_page
+    owner: BibliographicReference
+    domain_of:
+    - BibliographicReference
+    range: integer
+    minimum_value: 1
+class_uri: deo:BibliographicReference
+
+</code></pre>
+</details>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../javascripts/tablesort.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>
