@@ -14,9 +14,7 @@ plugins:
       execute: false
   - mermaid2:
       version: 10.9.0
-  - awesome-nav
 nav:
-  - Home: ResearchPaper.md
   - Index: index.md
   - About: about.md
 site_url: https://liuji1031.github.io/research-paper-schema
