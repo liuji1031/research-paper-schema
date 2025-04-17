@@ -428,79 +428,79 @@
 <tr>
 <td><a href="../abstract/">abstract</a></td>
 <td>0..1 <br/> <a href="../Abstract/">Abstract</a></td>
-<td></td>
+<td>A brief summary of a book, a research article, thesis, review, conference pro...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../introduction/">introduction</a></td>
 <td>0..1 <br/> <a href="../Introduction/">Introduction</a></td>
-<td></td>
+<td>An initial description which states the purpose and goals of the following wr...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../methods_materials/">methods_materials</a></td>
 <td>* <br/> <a href="../Any/">Any</a> or <br/><a href="../Materials/">Materials</a> or <br/><a href="../Methods/">Methods</a></td>
-<td></td>
+<td>A description in a research paper documenting the specialized materials used ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../results/">results</a></td>
 <td>0..1 <br/> <a href="../Results/">Results</a></td>
-<td></td>
+<td>The report of the specific findings of an investigation, given without discus...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../discussion/">discussion</a></td>
 <td>0..1 <br/> <a href="../Discussion/">Discussion</a></td>
-<td></td>
+<td>An interpretation and discussion of the results obtained and an analysis of t...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../conclusion/">conclusion</a></td>
 <td>0..1 <br/> <a href="../Conclusion/">Conclusion</a></td>
-<td></td>
+<td>A reflection on the preceding text, summarizing the evidence, arguments or pr...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../references/">references</a></td>
 <td>0..1 <br/> <a href="../BibliographicReferenceList/">BibliographicReferenceList</a></td>
-<td></td>
+<td>A list, usually within a bibliography, of all the references within the citin...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../acknowledgements/">acknowledgements</a></td>
 <td>0..1 <br/> <a href="../Acknowledgements/">Acknowledgements</a></td>
-<td></td>
+<td>Usually part of the preface, or a separate section in its own right, often as...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../author_contributions/">author_contributions</a></td>
 <td>0..1 <br/> <a href="../AuthorContribution/">AuthorContribution</a></td>
-<td></td>
+<td>A description of the roles played by an author in the publication</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../conflict_of_interests/">conflict_of_interests</a></td>
 <td>0..1 <br/> <a href="../ConflictOfInterests/">ConflictOfInterests</a></td>
-<td></td>
+<td>A part of a document used to declare any competing interests regarding the au...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../supplementary_information/">supplementary_information</a></td>
 <td>0..1 <br/> <a href="../SupplementaryInformationDescription/">SupplementaryInformationDescription</a></td>
-<td></td>
+<td>Information describing supplementary information relating to the document, in...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../figures/">figures</a></td>
 <td>* <br/> <a href="../Figure/">Figure</a></td>
-<td></td>
+<td>A communication object comprising one or more graphics, drawings, images, or ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../tables/">tables</a></td>
 <td>* <br/> <a href="../Table/">Table</a></td>
-<td>All tables in the document</td>
+<td>A set of data arranged in cells within rows and columns</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -542,6 +542,9 @@ from_schema: https://w3id.org/axle_informatics/research-paper-schema
 attributes:
   abstract:
     name: abstract
+    description: A brief summary of a book, a research article, thesis, review, conference
+      proceeding or any in-depth analysis of a particular subject or discipline, the
+      purpose of which is to help the reader quickly ascertain the publication's purpose.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     domain_of:
@@ -551,6 +554,10 @@ attributes:
     multivalued: false
   introduction:
     name: introduction
+    description: An initial description which states the purpose and goals of the
+      following writing, and, in the case of journal articles, typically includes
+      background information on the research topic and a review of related work in
+      the area.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     domain_of:
@@ -560,6 +567,10 @@ attributes:
     multivalued: false
   methods_materials:
     name: methods_materials
+    description: A description in a research paper documenting the specialized materials
+      used in the work described. This description is often combined with a description
+      of the methods used, in a section entitled 'Methods and Materials', 'Experimental'
+      or a related term.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     domain_of:
@@ -572,6 +583,8 @@ attributes:
     - range: Methods
   results:
     name: results
+    description: The report of the specific findings of an investigation, given without
+      discussion or conclusion being drawn.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     domain_of:
@@ -581,6 +594,9 @@ attributes:
     multivalued: false
   discussion:
     name: discussion
+    description: An interpretation and discussion of the results obtained and an analysis
+      of their significance, in support of conclusions. These conclusions may be part
+      of this discussion or may be included in a separate section of the document.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     domain_of:
@@ -590,6 +606,10 @@ attributes:
     multivalued: false
   conclusion:
     name: conclusion
+    description: A reflection on the preceding text, summarizing the evidence, arguments
+      or premises presented in the document and their logical outcomes. Conclusions
+      are a fundamental feature in academic research publications, and may be included
+      in the Discussion section.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     domain_of:
@@ -599,6 +619,9 @@ attributes:
     multivalued: false
   references:
     name: references
+    description: A list, usually within a bibliography, of all the references within
+      the citing document that refer to  journal articles, books, book chapters, Web
+      sites or similar publications.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     domain_of:
@@ -608,6 +631,12 @@ attributes:
     multivalued: false
   acknowledgements:
     name: acknowledgements
+    description: Usually part of the preface, or a separate section in its own right,
+      often as part of the back matter, it acknowledges those, including funding agencies,
+      who contributed to the undertaking of a research project described in a publication,
+      or to the creation of the work in some way. In scientific articles, the acknowledgements
+      are usually placed as a separated section immediately following the Discussion
+      or Conclusions.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     domain_of:
@@ -617,6 +646,7 @@ attributes:
     multivalued: false
   author_contributions:
     name: author_contributions
+    description: A description of the roles played by an author in the publication.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     domain_of:
@@ -626,6 +656,8 @@ attributes:
     multivalued: false
   conflict_of_interests:
     name: conflict_of_interests
+    description: A part of a document used to declare any competing interests regarding
+      the authors and/or funding organization for the work described in the document.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     domain_of:
@@ -635,6 +667,8 @@ attributes:
     multivalued: false
   supplementary_information:
     name: supplementary_information
+    description: Information describing supplementary information relating to the
+      document, including references or links to the relevant supplementary information.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     domain_of:
@@ -644,6 +678,8 @@ attributes:
     multivalued: false
   figures:
     name: figures
+    description: A communication object comprising one or more graphics, drawings,
+      images, or other visual representations..
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     domain_of:
@@ -653,8 +689,7 @@ attributes:
     multivalued: true
   tables:
     name: tables
-    description: All tables in the document. The table captions are usually included
-      in the table section, which begins with "Table" and the table number.
+    description: A set of data arranged in cells within rows and columns.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     domain_of:
@@ -678,6 +713,9 @@ from_schema: https://w3id.org/axle_informatics/research-paper-schema
 attributes:
   abstract:
     name: abstract
+    description: A brief summary of a book, a research article, thesis, review, conference
+      proceeding or any in-depth analysis of a particular subject or discipline, the
+      purpose of which is to help the reader quickly ascertain the publication's purpose.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     alias: abstract
@@ -689,6 +727,10 @@ attributes:
     multivalued: false
   introduction:
     name: introduction
+    description: An initial description which states the purpose and goals of the
+      following writing, and, in the case of journal articles, typically includes
+      background information on the research topic and a review of related work in
+      the area.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     alias: introduction
@@ -700,6 +742,10 @@ attributes:
     multivalued: false
   methods_materials:
     name: methods_materials
+    description: A description in a research paper documenting the specialized materials
+      used in the work described. This description is often combined with a description
+      of the methods used, in a section entitled 'Methods and Materials', 'Experimental'
+      or a related term.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     alias: methods_materials
@@ -714,6 +760,8 @@ attributes:
     - range: Methods
   results:
     name: results
+    description: The report of the specific findings of an investigation, given without
+      discussion or conclusion being drawn.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     alias: results
@@ -725,6 +773,9 @@ attributes:
     multivalued: false
   discussion:
     name: discussion
+    description: An interpretation and discussion of the results obtained and an analysis
+      of their significance, in support of conclusions. These conclusions may be part
+      of this discussion or may be included in a separate section of the document.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     alias: discussion
@@ -736,6 +787,10 @@ attributes:
     multivalued: false
   conclusion:
     name: conclusion
+    description: A reflection on the preceding text, summarizing the evidence, arguments
+      or premises presented in the document and their logical outcomes. Conclusions
+      are a fundamental feature in academic research publications, and may be included
+      in the Discussion section.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     alias: conclusion
@@ -747,6 +802,9 @@ attributes:
     multivalued: false
   references:
     name: references
+    description: A list, usually within a bibliography, of all the references within
+      the citing document that refer to  journal articles, books, book chapters, Web
+      sites or similar publications.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     alias: references
@@ -758,6 +816,12 @@ attributes:
     multivalued: false
   acknowledgements:
     name: acknowledgements
+    description: Usually part of the preface, or a separate section in its own right,
+      often as part of the back matter, it acknowledges those, including funding agencies,
+      who contributed to the undertaking of a research project described in a publication,
+      or to the creation of the work in some way. In scientific articles, the acknowledgements
+      are usually placed as a separated section immediately following the Discussion
+      or Conclusions.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     alias: acknowledgements
@@ -769,6 +833,7 @@ attributes:
     multivalued: false
   author_contributions:
     name: author_contributions
+    description: A description of the roles played by an author in the publication.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     alias: author_contributions
@@ -780,6 +845,8 @@ attributes:
     multivalued: false
   conflict_of_interests:
     name: conflict_of_interests
+    description: A part of a document used to declare any competing interests regarding
+      the authors and/or funding organization for the work described in the document.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     alias: conflict_of_interests
@@ -791,6 +858,8 @@ attributes:
     multivalued: false
   supplementary_information:
     name: supplementary_information
+    description: Information describing supplementary information relating to the
+      document, including references or links to the relevant supplementary information.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     alias: supplementary_information
@@ -802,6 +871,8 @@ attributes:
     multivalued: false
   figures:
     name: figures
+    description: A communication object comprising one or more graphics, drawings,
+      images, or other visual representations..
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     alias: figures
@@ -813,8 +884,7 @@ attributes:
     multivalued: true
   tables:
     name: tables
-    description: All tables in the document. The table captions are usually included
-      in the table section, which begins with "Table" and the table number.
+    description: A set of data arranged in cells within rows and columns.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
     rank: 1000
     alias: tables
