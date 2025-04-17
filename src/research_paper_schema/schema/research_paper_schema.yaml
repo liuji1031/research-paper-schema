@@ -45,14 +45,27 @@ classes:
     tree_root: true
     attributes:
       abstract:
+        description: >-
+          A brief summary of a book, a research article, thesis, review, conference proceeding
+          or any in-depth analysis of a particular subject or discipline, the purpose
+          of which is to help the reader quickly ascertain the publication's purpose.
         range: Abstract
         required: false
         multivalued: false
       introduction:
+        description: >-
+          An initial description which states the purpose and goals of the following writing,
+          and, in the case of journal articles, typically includes background information
+          on the research topic and a review of related work in the area.
         range: Introduction
         required: false
         multivalued: false
       methods_materials:
+        description: >-
+          A description in a research paper documenting the specialized materials used
+          in the work described. This description is often combined with a description
+          of the methods used, in a section entitled 'Methods and Materials', 'Experimental'
+          or a related term.
         range: Any
         any_of:
         - range: Materials
@@ -60,45 +73,76 @@ classes:
         required: false
         multivalued: true
       results:
+        description: >-
+          The report of the specific findings of an investigation, given without discussion
+          or conclusion being drawn.
         range: Results
         required: false
         multivalued: false
       discussion:
+        description: >-
+          An interpretation and discussion of the results obtained and an analysis of
+          their significance, in support of conclusions. These conclusions may be part
+          of this discussion or may be included in a separate section of the document.
         range: Discussion
         required: false
         multivalued: false
       conclusion:
+        description: >-
+          A reflection on the preceding text, summarizing the evidence, arguments or premises
+          presented in the document and their logical outcomes. Conclusions are a fundamental
+          feature in academic research publications, and may be included in the Discussion
+          section.
         range: Conclusion
         required: false
         multivalued: false
       references:
+        description: >-
+          A list, usually within a bibliography, of all the references within the citing
+          document that refer to  journal articles, books, book chapters, Web sites or
+          similar publications.
         range: BibliographicReferenceList
         required: false
         multivalued: false
       acknowledgements:
+        description: >-
+          Usually part of the preface, or a separate section in its own right, often as
+          part of the back matter, it acknowledges those, including funding agencies,
+          who contributed to the undertaking of a research project described in a publication,
+          or to the creation of the work in some way. In scientific articles, the acknowledgements
+          are usually placed as a separated section immediately following the Discussion
+          or Conclusions.
         range: Acknowledgements
         required: false
         multivalued: false
       author_contributions:
+        description: >-
+          A description of the roles played by an author in the publication.
         range: AuthorContribution
         required: false
         multivalued: false
       conflict_of_interests:
+        description: >-
+          A part of a document used to declare any competing interests regarding the authors and/or funding organization for the work described in the document.
         range: ConflictOfInterests
         required: false
         multivalued: false
       supplementary_information:
+        description: Information describing supplementary information relating to the document, including
+          references or links to the relevant supplementary information.
         range: SupplementaryInformationDescription
         required: false
         multivalued: false
       figures:
+        description: >-
+          A communication object comprising one or more graphics, drawings, images, or
+          other visual representations..
         range: Figure
         required: false
         multivalued: true
       tables:
-        description: All tables in the document. The table captions are usually
-          included in the table section, which begins with "Table" and the table
-          number.
+        description: >-
+          A set of data arranged in cells within rows and columns.
         range: Table
         required: false
         multivalued: true
