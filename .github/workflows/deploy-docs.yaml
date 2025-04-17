@@ -34,6 +34,7 @@ jobs:
       - name: Build documentation.
         run: |
           mkdir -p docs
+          cp .nav.yml docs/.nav.yml
           touch docs/.nojekyll
           make gendoc
           ([ ! -f docs/about.md ] && cp src/docs/about.md docs/) || true
