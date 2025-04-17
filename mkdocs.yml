@@ -1,5 +1,5 @@
 ---
-site_name: "research-paper-schema"
+site_name: "LinkML Schema for Research Paper"
 theme:
   name: material
   # palette:
