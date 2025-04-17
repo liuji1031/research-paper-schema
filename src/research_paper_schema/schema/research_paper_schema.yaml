@@ -3,7 +3,7 @@ id: https://w3id.org/axle_informatics/research-paper-schema
 name: research-paper-schema
 title: research-paper-schema
 description: |-
-  LinkML schema for research paper
+  LinkML schema for describing a research paper
 license: Apache Software License 2.0
 see_also:
   - https://axle_informatics.github.io/research-paper-schema
@@ -11,86 +11,304 @@ see_also:
 prefixes:
   research_paper_schema: https://w3id.org/axle_informatics/research-paper-schema/
   linkml: https://w3id.org/linkml/
-  biolink: https://w3id.org/biolink/
-  schema: http://schema.org/
-  PATO: http://purl.obolibrary.org/obo/PATO_
-  example: https://example.org/
+  dcterms: http://purl.org/dc/terms/
+  deo: http://purl.org/spar/deo/
+  obo: http://purl.obolibrary.org/obo/
+  fabio: http://purl.org/spar/fabio/
+  doco: http://purl.org/spar/doco/
 default_prefix: research_paper_schema
 default_range: string
 
 imports:
   - linkml:types
+  - reference_schema
 
-classes:
-
-  NamedThing:
-    description: >-
-      A generic grouping for any identifiable entity
-    slots:
-      - id
-      - name
-      - description
-    class_uri: schema:Thing
-
-  ResearchPaper:
-    is_a: NamedThing
-    description: >-
-      Represents a ResearchPaper
-    slots:
-      - primary_email
-      - birth_date
-      - age_in_years
-      - vital_status
-    slot_usage:
-      primary_email:
-        pattern: "^\\S+@[\\S+\\.]+\\S+"
-
-  ResearchPaperCollection:
-    tree_root: true
-    description: >-
-      A holder for ResearchPaper objects
-    attributes:
-      entries:
-        range: ResearchPaper
-        multivalued: true
-        inlined: true
-
+types: {}
 slots:
-  id:
-    identifier: true
-    slot_uri: schema:identifier
-    range: uriorcurie
-    description: A unique identifier for a thing
-  name:
-    slot_uri: schema:name
-    description: A human-readable name for a thing
-  description:
-    slot_uri: schema:description
-    description: A human-readable description for a thing
-  primary_email:
-    slot_uri: schema:email
-    description: The main email address of a person
-  birth_date:
-    slot_uri: schema:birthDate
-    range: date
-    description: Date on which a person is born
-  age_in_years:
-    range: integer
-    description: Number of years since birth
-  vital_status:
-    range: PersonStatus
-    description: living or dead status
+  dcterms_has_part:
+    slot_uri: dcterms:hasPart
+  pattern_contains:
+    description: this slot is used to describe the child resources or entities that are contained in the parent resource or entity. 
+    slot_uri: http://www.essepuntato.it/2008/12/pattern#contains
+    is_a: dcterms_has_part
+  textual_content:
+    description: textual content
+    range: string
+classes:
+  ResearchPaper:
+    class_uri: fabio:ResearchPaper
+    description: >-
+      A scholarly work that reports original research contributions addressing
+      theoretical, analytical or experimental aspects of a particular scholarly domain.
+      E.g. see http://iswc2018.semanticweb.org/call-for-research-track-papers/.
+    title: research paper
+    tree_root: true
+    attributes:
+      abstract:
+        range: Abstract
+        required: false
+        multivalued: false
+      introduction:
+        range: Introduction
+        required: false
+        multivalued: false
+      methods_materials:
+        range: Any
+        any_of:
+        - range: Materials
+        - range: Methods
+        required: false
+        multivalued: true
+      results:
+        range: Results
+        required: false
+        multivalued: false
+      discussion:
+        range: Discussion
+        required: false
+        multivalued: false
+      conclusion:
+        range: Conclusion
+        required: false
+        multivalued: false
+      references:
+        range: BibliographicReferenceList
+        required: false
+        multivalued: false
+      acknowledgements:
+        range: Acknowledgements
+        required: false
+        multivalued: false
+      author_contributions:
+        range: AuthorContribution
+        required: false
+        multivalued: false
+      conflict_of_interests:
+        range: ConflictOfInterests
+        required: false
+        multivalued: false
+      supplementary_information:
+        range: SupplementaryInformationDescription
+        required: false
+        multivalued: false
+      figures:
+        range: Figure
+        required: false
+        multivalued: true
+      tables:
+        description: All tables in the document. The table captions are usually
+          included in the table section, which begins with "Table" and the table
+          number.
+        range: Table
+        required: false
+        multivalued: true
 
-enums:
-  PersonStatus:
-    permissible_values:
-      ALIVE:
-        description: the person is living
-        meaning: PATO:0001421
-      DEAD:
-        description: the person is deceased
-        meaning: PATO:0001422
-      UNKNOWN:
-        description: the vital status is not known
-        todos:
-          - map this to an ontology
+  Abstract:
+    class_uri: doco:Abstract
+    description: >-
+      A brief summary of a book, a research article, thesis, review, conference proceeding
+      or any in-depth analysis of a particular subject or discipline, the purpose
+      of which is to help the reader quickly ascertain the publication's purpose.
+    title: abstract
+    is_a: Section
+
+  Introduction:
+    class_uri: deo:Introduction
+    description: >-
+      An initial description which states the purpose and goals of the following writing,
+      and, in the case of journal articles, typically includes background information
+      on the research topic and a review of related work in the area.
+    title: introduction
+    is_a: Section
+
+  Materials:
+    class_uri: deo:Materials
+    description: >-
+      A description in a research paper documenting the specialized materials used
+      in the work described. This description is often combined with a description
+      of the methods used, in a section entitled 'Methods and Materials', 'Experimental'
+      or a related term.
+    title: materials
+    is_a: Section
+  
+  Methods:
+    class_uri: deo:Methods
+    description: >-
+      A description in a research paper documenting the specialized methods used in
+      the work described. This description is often combined with a description of
+      the materials used, in a section entitled 'Methods and Materials', 'Experimental'
+      or a related term.
+    title: methods
+    is_a: Section
+
+  Results:
+    class_uri: deo:Results
+    description: >-
+      The report of the specific findings of an investigation, given without discussion
+      or conclusion being drawn.
+    title: results
+    is_a: Section
+  
+  Discussion:
+    class_uri: deo:Discussion
+    description: >-
+      An interpretation and discussion of the results obtained and an analysis of
+      their significance, in support of conclusions. These conclusions may be part
+      of this discussion or may be included in a separate section of the document.
+    title: discussion
+    is_a: Section
+
+  Conclusion:
+    class_uri: deo:Conclusion
+    description: >-
+      A reflection on the preceding text, summarizing the evidence, arguments or premises
+      presented in the document and their logical outcomes. Conclusions are a fundamental
+      feature in academic research publications, and may be included in the Discussion
+      section.
+    title: conclusion
+    is_a: Section
+
+  Acknowledgements:
+    class_uri: deo:Acknowledgements
+    description: >-
+      Usually part of the preface, or a separate section in its own right, often as
+      part of the back matter, it acknowledges those, including funding agencies,
+      who contributed to the undertaking of a research project described in a publication,
+      or to the creation of the work in some way. In scientific articles, the acknowledgements
+      are usually placed as a separated section immediately following the Discussion
+      or Conclusions.
+    title: acknowledgements
+    is_a: Section
+
+  AuthorContribution:
+    class_uri: deo:AuthorContribution
+    description: >-
+      A description of the roles played by an author in the publication.
+    title: author contribution
+    is_a: Section
+
+  ConflictOfInterests:
+    class_uri: obo:IAO_0000616
+    description: >-
+      A part of a document used to declare any competing interests regarding the authors and/or funding organization for the work described in the document.
+    title: conflict of interest section
+    is_a: Section
+
+  SupplementaryInformationDescription:
+    class_uri: deo:SupplementaryInformationDescription
+    description:
+      Information describing supplementary information relating to the document, including
+      references or links to the relevant supplementary information.
+    title: supplementary information description
+    is_a: Section
+      
+  Paragraph:
+    class_uri: doco:Paragraph
+    description: >-
+      'A self-contained unit of discourse that deals with a particular point or idea.
+      Paragraphs contains one or more sentences. The start of a paragraph is indicated
+      by beginning on a new line, which may be indented or separated by a small vertical
+      space by the preceding paragraph. '
+    title: paragraph
+    slot_usage:
+      textual_content:
+        required: true
+        range: string
+        multivalued: false
+    slots:
+    - textual_content
+
+  Section:
+    class_uri: doco:Section
+    description: >-
+      A logical division of the text, usually numbered and/or titled, which may contain
+      subsections.
+    title: section
+    attributes:
+      section_title:
+        range: SectionTitle
+        required: True
+        multivalued: false
+    slot_usage:
+      pattern_contains:
+        required: true
+        range: Any
+        any_of:
+        - range: Section
+        - range: Paragraph
+        multivalued: true
+    slots:
+    - pattern_contains
+
+  SectionTitle:
+    class_uri: doco:SectionTitle
+    description: >-
+      The title of a section.
+    title: section title
+    slots:
+    - textual_content
+    slot_usage:
+      textual_content:
+        required: true
+  
+  BibliographicReferenceList:
+    class_uri: doco:BibliographicReferenceList
+    description: >-
+      A list, usually within a bibliography, of all the references within the citing
+      document that refer to  journal articles, books, book chapters, Web sites or
+      similar publications.
+    title: bibliographic reference list
+    slot_usage:
+      pattern_contains:
+        required: true
+        range: BibliographicReference
+        multivalued: true
+    slots:
+    - pattern_contains
+
+  Figure:
+    class_uri: doco:Figure
+    description: >-
+      A communication object comprising one or more graphics, drawings, images, or
+      other visual representations..
+    title: figure
+    attributes:
+      figure_caption:
+        slot_uri: obo:IAO_0000304
+        description: A textual entity that describes a figure
+        title: caption
+        range: string
+        required: false
+        multivalued: false
+      image:
+        slot_uri: obo:IAO_0000101
+        description: An image is an affine projection to a two dimensional surface, of measurements of some quality of an entity or entities repeated at regular intervals across a spatial range, where the measurements are represented as color and luminosity on the projected on surface.
+        required: false
+        range: Any
+        any_of:
+        - range: integer
+        - range: float
+        array:
+          exact_number_dimensions: 3 # h x w x c
+
+  Table:
+    class_uri: doco:Table
+    description: >-
+      A set of data arranged in cells within rows and columns.
+    title: table
+    attributes:
+      table_caption:
+        description: A caption that describes the table. The caption usually begins
+          with "Table" and the table number. The table caption is usually included
+          above the table.
+        range: string
+        required: false
+        multivalued: false
+      table_data:
+        description: The data in the table. The table data is usually in a 2D array
+          format, where the first dimension is the rows and the second dimension
+          is the columns.
+        required: false
+        range: string
+        array:
+          exact_number_dimensions: 2 # row x column

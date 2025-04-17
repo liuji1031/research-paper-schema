@@ -4,7 +4,7 @@ LinkML schema for research paper
 
 ## Website
 
-[https://axle_informatics.github.io/research-paper-schema](https://axle_informatics.github.io/research-paper-schema)
+[https://liuji1031.github.io/research-paper-schema](https://liuji1031.github.io/research-paper-schema)
 
 ## Repository Structure
 

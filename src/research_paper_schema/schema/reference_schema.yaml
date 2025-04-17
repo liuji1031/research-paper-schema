@@ -1,0 +1,259 @@
+id: http://example.org/reference.yaml
+name: reference
+description: reference
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  dcterms: http://purl.org/dc/terms/
+  fabio: http://purl.org/spar/fabio/
+  prism: http://prismstandard.org/namespaces/basic/2.0/
+  frbr: http://purl.org/vocab/frbr/core#
+  foaf: http://xmlns.com/foaf/0.1/
+  schema: https://schema.org/
+  dc: http://purl.org/dc/elements/1.1/
+  deo: http://purl.org/spar/deo/
+  doco: http://purl.org/spar/doco/
+  reference: http://example.org/reference/
+default_prefix: reference
+default_range: string
+types:
+  year:
+    base: str
+    pattern: ^-?\d{4,}(Z|([+-](0[0-9]|1[0-3]):[0-5][0-9]|14:00))?$
+    uri: xsd:gYear
+  year_month:
+    base: str
+    pattern: ^(-?\d{4,})-(0[1-9]|1[0-2])(Z|([+-](0[0-9]|1[0-3]):[0-5][0-9]|14:00))?$
+    uri: xsd:gYearMonth
+slots:
+  title:
+    slot_uri: dcterms:title
+    description: A name given to a resource.  Typically, the title will be the name
+      by which the resource is formally known.
+    title: has title
+    range: string
+  has_publication_year:
+    slot_uri: fabio:hasPublicationYear
+    description: The year in which a resource is published.
+    title: has publication year
+    range: year
+  doi:
+    slot_uri: prism:doi
+    description: A Digital Object Identifier for a serial publication item, a dataset
+      or some other entity.
+    title: has DOI
+    range: string
+    pattern: ^10.\d{4,9}/[-._;()/:A-Z0-9]+$
+  part_of:
+    slot_uri: frbr:partOf
+    description: Meaning = is part of.  As defined by FRBR (http://www.ifla.org/VII/s13/frbr/frbr1.htm;
+      http://purl.org/vocab/frbr/core#partOf), a property indicating that one entity
+      is a part of another entity. In the case of a bibliographic reference, the reference
+      is part of a larger work, such as a journal article, a book, a book chapter
+      or a Web site. 
+    title: is part of
+    range: string
+  first_name:
+    slot_uri: foaf:firstName
+    description: The first name of a person.
+    title: firstName
+    range: string
+  last_name:
+    slot_uri: foaf:lastName
+    description: The last name of a person.
+    title: lastName
+    range: string
+  additional_name:
+    slot_uri: schema:additionalName
+    description: An additional name for a Person, can be used for a middle name.
+    title: additionalName
+    range: string
+  issn:
+    slot_uri: prism:issn
+    description: The International Standard Serial Number, ISSN, an identifer for
+      serial publications.
+    title: has ISSN
+    range: string
+    pattern: ^\d{4}-\d{3}[\dX]$
+  eissn:
+    slot_uri: prism:eIssn
+    description: An International Standard Serial Number, ISSN, for electronic versions
+      of serial publications.
+    title: has eISSN
+    range: string
+    pattern: ^\d{4}-\d{3}[\dX]$
+  isbn:
+    slot_uri: prism:isbn
+    description: The International Standard Book Number, ISBN, used to identify published
+      books or, more rarely, journal issues.
+    title: has ISBN
+    range: string
+    pattern: ^(?:ISBN(?:-13)?:?\ )?(?=[0-9]{13}$|(?=(?:[0-9]+[-\ ]){4})[-\ 0-9]{17}$)97[89][-\ ]?[0-9]{1,5}[-\ ]?[0-9]+[-\ ]?[0-9]+[-\ ]?[0-9]$ # https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/ch04s13.html
+  publication_date:
+    slot_uri: prism:publicationDate
+    description: 'The date on which a document or entity is published.
+
+      The date can be expressed in three different formats:
+
+      - yyyy-mm-dd (i.e., xsd:date)
+
+      - yyyy-mm (i.e., xsd:gYearMonth)
+
+      - yyyy (i.e., xsd:gYear)
+
+      The date on which a resource is published or disclosed.'
+    title: has publication date
+    range: Any
+    any_of:
+    - range: date
+    - range: year
+    - range: year_month
+  starting_page:
+    slot_uri: prism:startingPage
+    description: Identifies the first page of an entity such as a journal article.
+    title: has starting page
+    range: integer
+    minimum_value: 1
+  ending_page:
+    slot_uri: prism:endingPage
+    description: Identifies the last page of an entity such as a journal article.
+    title: has ending page
+    range: integer
+    minimum_value: 1
+  publisher:
+    slot_uri: dc:publisher
+    description: 'Examples of a Publisher include a person, an organization, or a
+      service. Typically, the name of a Publisher should be used to indicate the entity.
+
+      An entity responsible for making the resource available.'
+    title: Publisher
+    range: string
+  edition:
+    slot_uri: prism:edition
+    description: An identifier for one of several alternative issues of a magazine,
+      a book or other resource.
+    title: has edition
+    range: string
+  has_place_of_publication:
+    slot_uri: fabio:hasPlaceOfPublication
+    description: The place (usually, the city) where the publisher of a particular
+      bibliographic resource is located.
+    title: has place of publication
+    range: string
+  issue:
+    slot_uri: prism:issueIdentifier
+    description: An identifier used to identify a specific issue of a magazine, a
+      journal or other resource.
+    title: has issue identifier
+    range: string
+  volume:
+    slot_uri: prism:volume
+    description: An identifier for a particular volume of a resource, such as a journal
+      or a multi-volume book.
+    title: has volume identifier
+    range: string
+
+classes:
+  Any:
+    class_uri: linkml:Any
+  Person:
+    class_uri: foaf:Person
+    slots:
+    - first_name
+    - last_name
+    - additional_name
+    description: A person.
+    title: Person
+    slot_usage:
+      first_name:
+        required: true
+        multivalued: false
+      last_name:
+        required: true
+        multivalued: false
+      additional_name:
+        required: false
+        multivalued: false
+  Journal:
+    class_uri: fabio:Journal
+    description: A scholarly periodical primarily devoted to the publication of original
+      research papers. [Printed and electronic manifestations of the same journal
+      are usually identified by separate print and electronic International Standard
+      Serial Numbers (ISSN or eISSN, respectively), that identifies the journal as
+      a whole, not to individual issues of it.]
+    title: journal
+    slots:
+    - title
+    - publication_date
+    - publisher
+    - issn
+    - eissn
+    - issue
+    - volume
+
+
+  BibliographicReference:
+    class_uri: deo:BibliographicReference
+    description: A reference, usually contained in a footnote or a bibliographic reference list,
+      that refer to another publication, such as a journal article, a book, a book
+      chapter or a Web site. The inclusion of the bibliographic reference in a publication
+      constitutes the performative act of bibliographic citation.
+    title: bibliographic reference
+    attributes:
+      AuthorList:
+        range: ListOfAuthors
+        required: false
+        multivalued: false
+    slots:
+    - title
+    - has_publication_year
+    - doi
+    - part_of
+    - starting_page
+    - ending_page
+    slot_usage:
+      title:
+        required: true
+        multivalued: false
+      part_of:
+        required: true
+        multivalued: false
+        range: Any
+        any_of:
+        - range: string
+        - range: Journal
+        - range: Book
+  
+  ListOfAuthors:
+    class_uri: doco:ListOfAuthors
+    description: A list of items each denoting an author of a particular publication.
+    title: list of authors
+    attributes:
+      authors:
+        range: Person
+        required: true
+        multivalued: true
+  
+  Book:
+    class_uri: fabio:Book
+    description: A non-serial document that is complete in one volume or a designated
+      finite number of volumes.  A book published by a publisher is usually  identified
+      by an International Standard Book Number (ISBN), and may be manifested as a
+      physical printed publication on paper bound in a hard or soft cover, or in electronic
+      format as an 'e-book'.
+    title: book
+    slots:
+    - publication_date
+    - publisher
+    - isbn
+    - edition
+    - title
+    - has_place_of_publication
+
+      
+      
+  
+    
+

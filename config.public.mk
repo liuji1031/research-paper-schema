@@ -11,9 +11,6 @@ LINKML_SCHEMA_NAME="research_paper_schema"
 LINKML_SCHEMA_AUTHOR="Ji Liu <ji.liu@axleinfo.com>"
 LINKML_SCHEMA_DESCRIPTION="LinkML schema for research paper"
 LINKML_SCHEMA_SOURCE_PATH="src/research_paper_schema/schema/research_paper_schema.yaml"
-LINKML_SCHEMA_GOOGLE_SHEET_MODULE="personinfo_enums"
-LINKML_SCHEMA_GOOGLE_SHEET_ID="1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ"
-LINKML_SCHEMA_GOOGLE_SHEET_TABS="personinfo enums"
 LINKML_USE_SCHEMASHEETS=No
 
 ###### linkml generator variables, used by makefile
