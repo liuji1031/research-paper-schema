@@ -25,12 +25,12 @@ imports:
 
 types: {}
 slots:
-  dcterms_has_part:
+  has_part:
     slot_uri: dcterms:hasPart
   pattern_contains:
     description: this slot is used to describe the child resources or entities that are contained in the parent resource or entity. 
     slot_uri: http://www.essepuntato.it/2008/12/pattern#contains
-    is_a: dcterms_has_part
+    is_a: has_part
   textual_content:
     description: textual content
     range: string
