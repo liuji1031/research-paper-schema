@@ -44,6 +44,12 @@ classes:
     title: research paper
     tree_root: true
     attributes:
+      title:
+        description: The title of the research paper.
+        slot_uri: dcterms:title
+        range: string
+        required: true
+        multivalued: false
       author_list:
         description: >-
           A part of a document that enumerates the authors of the document
