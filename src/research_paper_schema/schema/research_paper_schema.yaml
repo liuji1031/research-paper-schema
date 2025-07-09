@@ -44,6 +44,12 @@ classes:
     title: research paper
     tree_root: true
     attributes:
+      author_list:
+        description: >-
+          A part of a document that enumerates the authors of the document
+        range: Author
+        required: false
+        multivalued: true
       abstract:
         description: >-
           A brief summary of a book, a research article, thesis, review, conference proceeding
@@ -146,6 +152,38 @@ classes:
         range: Table
         required: false
         multivalued: true
+  
+  Author:
+    class_uri: http://purl.uniprot.org/core/author
+    description: >-
+      The author of a publication.
+    title: author
+    attributes:
+      first_name:
+        description: The first name of the author.
+        range: string
+        required: false
+        multivalued: false
+      middle_name:
+        description: The middle name of the author.
+        range: string
+        required: false
+        multivalued: false
+      last_name:
+        description: The last name of the author.
+        range: string
+        required: false
+        multivalued: false
+      affiliation:
+        description: The affiliation of the author.
+        range: string
+        required: false
+        multivalued: false
+      orcid:
+        description: The ORCID of the author.
+        range: string
+        required: false
+        multivalued: false
 
   Abstract:
     class_uri: doco:Abstract
