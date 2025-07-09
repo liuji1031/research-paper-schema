@@ -420,6 +420,8 @@
     click Table href "../Table"
 
 
+      ResearchPaper : title
+
 
 </div>
 <!-- no inheritance hierarchy -->
@@ -434,6 +436,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="../title/">title</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>The title of the research paper</td>
+<td>direct</td>
+</tr>
 <tr>
 <td><a href="../author_list/">author_list</a></td>
 <td>* <br/> <a href="../Author/">Author</a></td>
@@ -555,6 +563,19 @@ description: A scholarly work that reports original research contributions addre
 title: research paper
 from_schema: https://w3id.org/axle_informatics/research-paper-schema
 attributes:
+  title:
+    name: title
+    description: The title of the research paper.
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    slot_uri: dcterms:title
+    domain_of:
+    - ResearchPaper
+    - Journal
+    - BibliographicReference
+    - Book
+    range: string
+    required: true
+    multivalued: false
   author_list:
     name: author_list
     description: A part of a document that enumerates the authors of the document
@@ -736,6 +757,21 @@ description: A scholarly work that reports original research contributions addre
 title: research paper
 from_schema: https://w3id.org/axle_informatics/research-paper-schema
 attributes:
+  title:
+    name: title
+    description: The title of the research paper.
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    slot_uri: dcterms:title
+    alias: title
+    owner: ResearchPaper
+    domain_of:
+    - ResearchPaper
+    - Journal
+    - BibliographicReference
+    - Book
+    range: string
+    required: true
+    multivalued: false
   author_list:
     name: author_list
     description: A part of a document that enumerates the authors of the document

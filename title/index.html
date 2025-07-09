@@ -380,11 +380,6 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Book/">Book</a></td>
-<td>A non-serial document that is complete in one volume or a designated finite n...</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../Journal/">Journal</a></td>
 <td>A scholarly periodical primarily devoted to the publication of original resea...</td>
 <td>no</td>
@@ -393,6 +388,16 @@
 <td><a href="../BibliographicReference/">BibliographicReference</a></td>
 <td>A reference, usually contained in a footnote or a bibliographic reference lis...</td>
 <td>yes</td>
+</tr>
+<tr>
+<td><a href="../Book/">Book</a></td>
+<td>A non-serial document that is complete in one volume or a designated finite n...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ResearchPaper/">ResearchPaper</a></td>
+<td>A scholarly work that reports original research contributions addressing theo...</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
@@ -436,6 +441,7 @@ rank: 1000
 slot_uri: dcterms:title
 alias: title
 domain_of:
+- ResearchPaper
 - Journal
 - BibliographicReference
 - Book
