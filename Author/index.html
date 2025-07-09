@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://liuji1031.github.io/research-paper-schema/Person/" rel="canonical"/>
+<link href="https://liuji1031.github.io/research-paper-schema/Author/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.11" name="generator"/>
-<title>Class: Person (Person) - LinkML Schema for Research Paper</title>
+<title>Class: author (Author) - LinkML Schema for Research Paper</title>
 <link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-person-person">
+<a class="md-skip" href="#class-author-author">
           Skip to content
         </a>
 </div>
@@ -47,7 +47,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Class: Person (Person)
+              Class: author (Author)
             
           </span>
 </div>
@@ -221,17 +221,21 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="class-person-person">Class: Person (Person)</h1>
-<p><em>A person.</em></p>
-<p>URI: <a href="http://xmlns.com/foaf/0.1/Person">foaf:Person</a></p>
+<h1 id="class-author-author">Class: author (Author)</h1>
+<p><em>The author of a publication.</em></p>
+<p>URI: <a href="http://purl.uniprot.org/core/author">http://purl.uniprot.org/core/author</a></p>
 <div class="mermaid"> classDiagram
-    class Person
-    click Person href "../Person"
-      Person : additional_name
+    class Author
+    click Author href "../Author"
+      Author : affiliation
 
-      Person : first_name
+      Author : first_name
 
-      Person : last_name
+      Author : last_name
+
+      Author : middle_name
+
+      Author : orcid
 
 
 </div>
@@ -249,20 +253,32 @@
 <tbody>
 <tr>
 <td><a href="../first_name/">first_name</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
-<td>The first name of a person</td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The first name of the author</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../middle_name/">middle_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The middle name of the author</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../last_name/">last_name</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
-<td>The last name of a person</td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The last name of the author</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../additional_name/">additional_name</a></td>
+<td><a href="../affiliation/">affiliation</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>An additional name for a Person, can be used for a middle name</td>
+<td>The affiliation of the author</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../orcid/">orcid</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The ORCID of the author</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -279,10 +295,10 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../ListOfAuthors/">ListOfAuthors</a></td>
-<td><a href="../authors/">authors</a></td>
+<td><a href="../ResearchPaper/">ResearchPaper</a></td>
+<td><a href="../author_list/">author_list</a></td>
 <td>range</td>
-<td><a href="./">Person</a></td>
+<td><a href="./">Author</a></td>
 </tr>
 </tbody>
 </table>
@@ -302,11 +318,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>foaf:Person</td>
+<td>http://purl.uniprot.org/core/author</td>
 </tr>
 <tr>
 <td>native</td>
-<td>research_paper_schema:Person</td>
+<td>research_paper_schema:Author</td>
 </tr>
 </tbody>
 </table>
@@ -314,96 +330,133 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: Person
-description: A person.
-title: Person
+<pre><code class="language-yaml">name: Author
+description: The author of a publication.
+title: author
 from_schema: https://w3id.org/axle_informatics/research-paper-schema
-slots:
-- first_name
-- last_name
-- additional_name
-slot_usage:
+attributes:
   first_name:
     name: first_name
-    required: true
+    description: The first name of the author.
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    domain_of:
+    - Author
+    - Person
+    range: string
+    required: false
+    multivalued: false
+  middle_name:
+    name: middle_name
+    description: The middle name of the author.
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    domain_of:
+    - Author
+    range: string
+    required: false
     multivalued: false
   last_name:
     name: last_name
-    required: true
-    multivalued: false
-  additional_name:
-    name: additional_name
+    description: The last name of the author.
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    domain_of:
+    - Author
+    - Person
+    range: string
     required: false
     multivalued: false
-class_uri: foaf:Person
+  affiliation:
+    name: affiliation
+    description: The affiliation of the author.
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    domain_of:
+    - Author
+    range: string
+    required: false
+    multivalued: false
+  orcid:
+    name: orcid
+    description: The ORCID of the author.
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    domain_of:
+    - Author
+    range: string
+    required: false
+    multivalued: false
+class_uri: http://purl.uniprot.org/core/author
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: Person
-description: A person.
-title: Person
+<pre><code class="language-yaml">name: Author
+description: The author of a publication.
+title: author
 from_schema: https://w3id.org/axle_informatics/research-paper-schema
-slot_usage:
-  first_name:
-    name: first_name
-    required: true
-    multivalued: false
-  last_name:
-    name: last_name
-    required: true
-    multivalued: false
-  additional_name:
-    name: additional_name
-    required: false
-    multivalued: false
 attributes:
   first_name:
     name: first_name
-    description: The first name of a person.
-    title: firstName
+    description: The first name of the author.
     from_schema: https://w3id.org/axle_informatics/research-paper-schema
-    rank: 1000
-    slot_uri: foaf:firstName
     alias: first_name
-    owner: Person
+    owner: Author
     domain_of:
     - Author
-    - Person
-    range: string
-    required: true
-    multivalued: false
-  last_name:
-    name: last_name
-    description: The last name of a person.
-    title: lastName
-    from_schema: https://w3id.org/axle_informatics/research-paper-schema
-    rank: 1000
-    slot_uri: foaf:lastName
-    alias: last_name
-    owner: Person
-    domain_of:
-    - Author
-    - Person
-    range: string
-    required: true
-    multivalued: false
-  additional_name:
-    name: additional_name
-    description: An additional name for a Person, can be used for a middle name.
-    title: additionalName
-    from_schema: https://w3id.org/axle_informatics/research-paper-schema
-    rank: 1000
-    slot_uri: schema:additionalName
-    alias: additional_name
-    owner: Person
-    domain_of:
     - Person
     range: string
     required: false
     multivalued: false
-class_uri: foaf:Person
+  middle_name:
+    name: middle_name
+    description: The middle name of the author.
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    alias: middle_name
+    owner: Author
+    domain_of:
+    - Author
+    range: string
+    required: false
+    multivalued: false
+  last_name:
+    name: last_name
+    description: The last name of the author.
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    alias: last_name
+    owner: Author
+    domain_of:
+    - Author
+    - Person
+    range: string
+    required: false
+    multivalued: false
+  affiliation:
+    name: affiliation
+    description: The affiliation of the author.
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    alias: affiliation
+    owner: Author
+    domain_of:
+    - Author
+    range: string
+    required: false
+    multivalued: false
+  orcid:
+    name: orcid
+    description: The ORCID of the author.
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    alias: orcid
+    owner: Author
+    domain_of:
+    - Author
+    range: string
+    required: false
+    multivalued: false
+class_uri: http://purl.uniprot.org/core/author
 
 </code></pre>
 </details>

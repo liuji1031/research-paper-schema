@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://liuji1031.github.io/research-paper-schema/first_name/">
+        <link rel="canonical" href="https://liuji1031.github.io/research-paper-schema/author_list/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Slot: firstName (first_name) - LinkML Schema for Research Paper</title>
+        <title>Slot: author_list - LinkML Schema for Research Paper</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-firstname-first_name" class="md-skip">
+        <a href="#slot-author_list" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: firstName (first_name)
+              Slot: author_list
             
           </span>
         </div>
@@ -364,9 +364,9 @@
   
 
 
-<h1 id="slot-firstname-first_name">Slot: firstName (first_name)</h1>
-<p><em>The first name of a person.</em></p>
-<p>URI: <a href="http://xmlns.com/foaf/0.1/firstName">foaf:firstName</a></p>
+<h1 id="slot-author_list">Slot: author_list</h1>
+<p><em>A part of a document that enumerates the authors of the document</em></p>
+<p>URI: <a href="https://w3id.org/axle_informatics/research-paper-schema/author_list">research_paper_schema:author_list</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -380,20 +380,20 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Person/">Person</a></td>
-<td>A person</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../Author/">Author</a></td>
-<td>The author of a publication</td>
+<td><a href="../ResearchPaper/">ResearchPaper</a></td>
+<td>A scholarly work that reports original research contributions addressing theo...</td>
 <td>no</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>
+<p>Range: <a href="../Author/">Author</a></p>
+</li>
+<li>
+<p>Multivalued: True</p>
+</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -411,28 +411,28 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>foaf:firstName</td>
+<td>research_paper_schema:author_list</td>
 </tr>
 <tr>
 <td>native</td>
-<td>research_paper_schema:first_name</td>
+<td>research_paper_schema:author_list</td>
 </tr>
 </tbody>
 </table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: first_name
-description: The first name of a person.
-title: firstName
+<pre><code class="language-yaml">name: author_list
+description: A part of a document that enumerates the authors of the document
 from_schema: https://w3id.org/axle_informatics/research-paper-schema
 rank: 1000
-slot_uri: foaf:firstName
-alias: first_name
+alias: author_list
+owner: ResearchPaper
 domain_of:
-- Author
-- Person
-range: string
+- ResearchPaper
+range: Author
+required: false
+multivalued: true
 
 </code></pre>
 

@@ -2,358 +2,378 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Abstract/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Acknowledgements/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Any/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
+    </url>
+    <url>
+         <loc>https://liuji1031.github.io/research-paper-schema/Author/</loc>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/AuthorContribution/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/AuthorList/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/BibliographicReference/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/BibliographicReferenceList/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Book/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Boolean/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Conclusion/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/ConflictOfInterests/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Curie/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Date/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/DateOrDatetime/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Datetime/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Decimal/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Discussion/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Double/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Figure/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Float/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Integer/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Introduction/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Journal/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Jsonpath/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Jsonpointer/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/ListOfAuthors/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Materials/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Methods/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Ncname/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Nodeidentifier/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Objectidentifier/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Paragraph/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Person/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/ResearchPaper/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Results/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Section/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/SectionTitle/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Sparqlpath/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/String/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/SupplementaryInformationDescription/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Table/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Time/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Uri/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Uriorcurie/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/Year/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/YearMonth/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/about/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/abstract/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/acknowledgements/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/additional_name/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
+    </url>
+    <url>
+         <loc>https://liuji1031.github.io/research-paper-schema/affiliation/</loc>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/author_contributions/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
+    </url>
+    <url>
+         <loc>https://liuji1031.github.io/research-paper-schema/author_list/</loc>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/authors/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/conclusion/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/conflict_of_interests/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/discussion/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/doi/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/edition/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/eissn/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/ending_page/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/figure_caption/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/figures/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/first_name/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/has_part/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/has_place_of_publication/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/has_publication_year/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/image/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/introduction/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/isbn/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/issn/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/issue/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/last_name/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/methods_materials/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
+    </url>
+    <url>
+         <loc>https://liuji1031.github.io/research-paper-schema/middle_name/</loc>
+         <lastmod>2025-07-09</lastmod>
+    </url>
+    <url>
+         <loc>https://liuji1031.github.io/research-paper-schema/orcid/</loc>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/part_of/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/pattern_contains/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/publication_date/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/publisher/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/references/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/research-paper-schema/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/results/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/section_title/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/starting_page/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/supplementary_information/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/table_caption/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/table_data/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/tables/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/textual_content/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/title/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
     <url>
          <loc>https://liuji1031.github.io/research-paper-schema/volume/</loc>
-         <lastmod>2025-04-18</lastmod>
+         <lastmod>2025-07-09</lastmod>
     </url>
 </urlset>

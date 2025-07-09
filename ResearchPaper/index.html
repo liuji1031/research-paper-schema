@@ -321,6 +321,15 @@
     click AuthorContribution href "../AuthorContribution"
 
 
+      ResearchPaper : author_list
+
+
+
+
+    ResearchPaper --&gt; "*" Author : author_list
+    click Author href "../Author"
+
+
       ResearchPaper : conclusion
 
 
@@ -425,6 +434,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="../author_list/">author_list</a></td>
+<td>* <br/> <a href="../Author/">Author</a></td>
+<td>A part of a document that enumerates the authors of the document</td>
+<td>direct</td>
+</tr>
 <tr>
 <td><a href="../abstract/">abstract</a></td>
 <td>0..1 <br/> <a href="../Abstract/">Abstract</a></td>
@@ -540,6 +555,16 @@ description: A scholarly work that reports original research contributions addre
 title: research paper
 from_schema: https://w3id.org/axle_informatics/research-paper-schema
 attributes:
+  author_list:
+    name: author_list
+    description: A part of a document that enumerates the authors of the document
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    domain_of:
+    - ResearchPaper
+    range: Author
+    required: false
+    multivalued: true
   abstract:
     name: abstract
     description: A brief summary of a book, a research article, thesis, review, conference
@@ -711,6 +736,18 @@ description: A scholarly work that reports original research contributions addre
 title: research paper
 from_schema: https://w3id.org/axle_informatics/research-paper-schema
 attributes:
+  author_list:
+    name: author_list
+    description: A part of a document that enumerates the authors of the document
+    from_schema: https://w3id.org/axle_informatics/research-paper-schema
+    rank: 1000
+    alias: author_list
+    owner: ResearchPaper
+    domain_of:
+    - ResearchPaper
+    range: Author
+    required: false
+    multivalued: true
   abstract:
     name: abstract
     description: A brief summary of a book, a research article, thesis, review, conference
